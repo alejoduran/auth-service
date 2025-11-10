@@ -11,4 +11,10 @@ Microservice to create and login users with a DB using JWT tokens
 
 1. **Clonar el repositorio**:
 ```bash
-git clone 
+git clone
+
+2. Run UserMicroserviceApplication main method
+
+3. you can check local Data Base in the following Url http://localhost:8080/h2-console
+
+4. Swageer documentation could be checked in the following Url: http://localhost:8080/swagger-ui/index.html
