@@ -17,4 +17,8 @@ git clone
 
 3. you can check local Data Base in the following Url http://localhost:8080/h2-console
 
+   Data JDBC URL: jdbc:h2:mem:auth
+        User Name : sa
+        Password  : blank
+
 4. Swageer documentation could be checked in the following Url: http://localhost:8080/swagger-ui/index.html
