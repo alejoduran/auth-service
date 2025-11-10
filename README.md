@@ -7,8 +7,18 @@ Microservice to create and login users with a DB using JWT tokens
 - Maven 3.6+ o Gradle
 - Data Base (H2)
 
-## 🛠 Instalación y Configuración
+## 🛠 Configuration and Installation 
 
-1. **Clonar el repositorio**:
+1. **Clone repository**:
 ```bash
-git clone 
+git clone
+
+2. Run UserMicroserviceApplication main method
+
+3. you can check local Data Base (H2 Console) in the following Url: http://localhost:8080/h2-console
+
+   Data JDBC URL: jdbc:h2:mem:auth
+        User Name : sa
+        Password  : blank
+
+4. Swageer documentation could be checked in the following Url: http://localhost:8080/swagger-ui/index.html
