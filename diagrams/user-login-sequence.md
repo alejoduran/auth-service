@@ -13,15 +13,15 @@ participant PE as PasswordEncoder
     US->>UR: findByEmail(email)
     UR-->>US: Optional<User>
     
-    alt Usuario no existe
+    alt User Dosen't exist
         US-->>AC: InvalidCredentialsException
         AC-->>C: 401 Unauthorized
-    else Password incorrecto
+    else Invalid Password
         US->>PE: matches(password, encodedPassword)
         PE-->>US: false
         US-->>AC: InvalidCredentialsException
         AC-->>C: 401 Unauthorized
-    else Credenciales válidas
+    else Invalid Credentials
         US->>PE: matches(password, encodedPassword)
         PE-->>US: true
         US->>JWT: generateToken(email)
