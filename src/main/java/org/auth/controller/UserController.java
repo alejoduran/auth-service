@@ -1,5 +1,8 @@
 package org.auth.controller;
 
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.media.Content;
+import io.swagger.v3.oas.annotations.media.Schema;
 import org.auth.model.dto.UserRequest;
 import org.auth.model.dto.UserResponse;
 import org.auth.service.UserService;
@@ -20,7 +23,12 @@ public class UserController {
   private UserService userService;
 
   @PostMapping
-  public ResponseEntity<UserResponse> createUser(@Valid @RequestBody UserRequest userRequest) {
+  @Operation(summary = " Create a new User")
+  public ResponseEntity<UserResponse> createUser(@io.swagger.v3.oas.annotations.parameters.RequestBody(
+      description = "User Data",
+      required = true,
+      content = @Content(schema = @Schema(implementation = UserRequest.class))
+  )@Valid @RequestBody UserRequest userRequest) {
     UserResponse response = userService.createUser(userRequest);
     return ResponseEntity.ok(response);
   }
