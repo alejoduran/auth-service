@@ -1,8 +1,7 @@
 ### diagrams/user-creation-sequence.md
-```markdown
+
 # Diagrama de Secuencia - Creación de Usuario
 
-```mermaid
 sequenceDiagram
     participant C as Cliente
     participant UC as UserController
