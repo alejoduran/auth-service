@@ -7,9 +7,9 @@ Microservice to create and login users with a DB using JWT tokens
 - Maven 3.6+ o Gradle
 - Data Base (H2)
 
-## 🛠 Instalación y Configuración
+## 🛠 Configuration and Installation 
 
-1. **Clonar el repositorio**:
+1. **Clone repository**:
 ```bash
 git clone
 
