@@ -6,7 +6,7 @@ graph TB
         AF[JWT Auth Filter]
     end
     
-    subgraph Microservices
+    subgraph auth-service
       subgraph Controllers
         UC[User Controller]
         AC[Auth Controller]
