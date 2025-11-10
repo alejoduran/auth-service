@@ -1,7 +1,4 @@
-### diagrams/user-creation-sequence.md
-
-# Diagrama de Secuencia - Creación de Usuario
-
+```mermaid
 sequenceDiagram
     participant C as Cliente
     participant UC as UserController
@@ -12,13 +9,13 @@ sequenceDiagram
     C->>UC: POST /api/users
     UC->>US: createUser(userRequest)
     
-    alt Validación fallida
+    alt Faild Validation
         US-->>UC: ValidationException
         UC-->>C: 400 Bad Request
-    else Email ya existe
+    else Email already exist
         US-->>UC: UserAlreadyExistsException
         UC-->>C: 400 Bad Request
-    else Datos válidos
+    else Valid Data
         US->>UR: existsByEmail(email)
         UR-->>US: false
         US->>JWT: generateToken(email)
@@ -28,3 +25,4 @@ sequenceDiagram
         US-->>UC: UserResponse
         UC-->>C: 200 OK + User Data
     end
+```
