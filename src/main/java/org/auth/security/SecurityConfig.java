@@ -13,19 +13,14 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
   @Override
   protected void configure(HttpSecurity http) throws Exception {
     http
-        // Deshabilitar CSRF y CORS
+
         .csrf().disable()
         .cors().disable()
-
-        // Configurar autorizaciones
         .authorizeRequests()
-        .antMatchers("/**").permitAll() // Permitir TODOS los endpoints sin autenticación
+        .antMatchers("/**").permitAll()
         .anyRequest().permitAll()
-
         .and()
-
-        // Configurar headers
-        .headers().frameOptions().disable(); // Para H2 console
+        .headers().frameOptions().disable();
   }
 
     @Bean
