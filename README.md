@@ -48,7 +48,8 @@ Request Body
 
 1. **Clone repository**:
 ```bash
-git clone
+git clone git@github.com:alejoduran/auth-service.git
+```
 
 2. Run UserMicroserviceApplication main method
 
