@@ -16,13 +16,13 @@ import org.springframework.web.bind.annotation.RestController;
 import javax.validation.Valid;
 
 @RestController
-@RequestMapping("/api/users")
+@RequestMapping("/api/v1/users")
 public class UserController {
 
   @Autowired
   private UserService userService;
 
-  @PostMapping
+  @PostMapping("/sign-up")
   @Operation(summary = " Create a new User")
   public ResponseEntity<UserResponse> createUser(@io.swagger.v3.oas.annotations.parameters.RequestBody(
       description = "User Data",
