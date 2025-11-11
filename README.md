@@ -7,6 +7,43 @@ Microservice to create and login users with a DB using JWT tokens
 - Maven 3.6+ o Gradle
 - Data Base (H2)
 
+## END POINTS
+
+## Sign Up
+
+POST /api/v1/users/sign-up
+
+Description: Creates a new user account
+
+Request Body:
+```json
+{
+  "name": "John Duran",
+  "email": "john.duran@gl.com",
+  "password": "dasda",
+  "phones": [
+    {
+      "number": 3292299,
+      "cityCode": 1,
+      "countryCode": "57"
+    }
+  ]
+}
+```
+## Login
+
+POST /api/V1/auth/login
+
+Description: User Authentication
+
+Request Body
+
+```json
+{
+  "email": "john.duran@gl.com",
+  "password": "passw123"
+}
+```
 ## 🛠 Configuration and Installation 
 
 1. **Clone repository**:
